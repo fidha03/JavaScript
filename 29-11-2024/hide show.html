@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide/Show Content</title>
+    <style>
+        .container{
+            margin-left: 400px;
+            margin-top: 50px;
+        }
+        #div {
+            border: solid black 5px;
+            padding: 5px;
+            width: 500px;
+        }
+
+        #button {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="div">
+            <p id="text">This content is visible.</p>
+        </div>
+        <button id="button" onclick="change()">Hide Content</button>
+
+        <script>
+
+            var text = document.getElementById('text');
+            var button = document.getElementById('button');
+
+            function change() {
+                if (text.style.display == 'none') {
+                    text.style.display = 'block'
+                    button.innerHTML = "Hide Content"
+                }
+                else {
+                    text.style.display = 'none'
+                    button.innerHTML = "Show Content"
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
