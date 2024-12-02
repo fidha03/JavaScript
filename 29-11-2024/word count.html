@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count</title>
+</head>
+
+<body>
+    <div class="container">
+        <textarea id="text" placeholder="Type your text here" rows="10" cols="50"></textarea>
+        <p id="wordcount" onclick="count()">Word Count: 0</p>
+
+        <script>
+            var text = document.getElementById('text')
+            var wordcount = document.getElementById('wordcount')
+
+            function count() {
+                var content = text.value.trim().split(' ');
+                wordcount.innerHTML = `Word Count : ${content.length}`
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
